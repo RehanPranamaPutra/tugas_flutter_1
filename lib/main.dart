@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tugas1/latihan_form/page_mahasiswa.dart';
+import 'package:flutter_tugas1/navbar/page_register.dart';
+import 'package:flutter_tugas1/navbar/page_tab_bar.dart';
 import 'package:flutter_tugas1/screen/page_column.dart';
 import 'package:flutter_tugas1/screen/page_dua.dart';
 import 'package:flutter_tugas1/screen/page_gambar.dart';
@@ -6,8 +9,8 @@ import 'package:flutter_tugas1/screen/page_list_horizontal.dart';
 import 'package:flutter_tugas1/screen/page_row.dart';
 import 'package:flutter_tugas1/screen/page_row_column.dart';
 import 'package:flutter_tugas1/screen/page_satu.dart';
-import 'package:flutter_tugas1/screen/page_tiga.dart';
 import 'package:flutter_tugas1/screen/page_url_image.dart';
+import 'package:flutter_tugas1/slicing_ui/splash_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -146,6 +149,30 @@ class PageUtama extends StatelessWidget {
             },
                 color : Colors.orange,
                 child : Text ('Page Url Image', style: TextStyle(fontSize: 14, color: Colors.white))
+            ),
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)
+              => PageTabBar()
+              ));
+            },
+                color : Colors.orange,
+                child : Text ('Tab', style: TextStyle(fontSize: 14, color: Colors.white))
+            ),
+            MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)
+              => PageMahasiswa()
+              ));
+            },
+                color : Colors.orange,
+                child : Text ('Mahasiswa', style: TextStyle(fontSize: 14, color: Colors.white))
+            ),
+             MaterialButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)
+              => SplashPage()
+              ));
+            },
+                color : Colors.orange,
+                child : Text ('Scling UI', style: TextStyle(fontSize: 14, color: Colors.white))
             ),
           ],
         ),
